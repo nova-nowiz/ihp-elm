@@ -1,0 +1,16 @@
+services:
+
+  ihp-elm:
+    image: nixpkgs/nix-flakes:latest
+
+    default: true
+
+    commands:
+      init:
+        - cd "${TUGBOAT_ROOT}" && nix build .#ihp-elm-prod
+
+      build:
+        - cd "${TUGBOAT_ROOT}" && nix build .#ihp-elm-prod
+
+      start:
+        - cd "${TUGBOAT_ROOT}/result/lib" && ../bin/RunProdServer
