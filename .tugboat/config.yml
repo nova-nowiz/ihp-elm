@@ -1,7 +1,7 @@
 services:
 
   ihp-elm:
-    image: tugboat/alpine:latest
+    image: tugboat/alpine
     default: true
 
     commands:
