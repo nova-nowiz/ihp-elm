@@ -7,6 +7,8 @@ services:
 
     commands:
       init:
+        - ls -la /
+        - ls -la "${TUGBOAT_ROOT}"
         - cd "${TUGBOAT_ROOT}" && nix build .#ihp-elm-prod
 
       build:
